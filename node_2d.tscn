@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://bnagb0iplypge"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_right = 139.0
+offset_bottom = 57.0
+placeholder_text = "type here..."

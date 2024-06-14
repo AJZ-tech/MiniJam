@@ -1,0 +1,55 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://c7q0eqly5yhlq"]
+
+[ext_resource type="Texture2D" uid="uid://cs412tp1k7w0q" path="res://Shooter/army_guy0.png" id="1_q502x"]
+[ext_resource type="Texture2D" uid="uid://bj6ee2g6872mn" path="res://Shooter/army_guy1.png" id="2_ykjtr"]
+[ext_resource type="Texture2D" uid="uid://lsmauqf2yrf4" path="res://Shooter/army_guy2.png" id="3_bdpyq"]
+[ext_resource type="Texture2D" uid="uid://m8riy4txmxu1" path="res://Shooter/army_guy3.png" id="4_1m2fn"]
+[ext_resource type="Texture2D" uid="uid://cp170hrn2nf18" path="res://Shooter/shooter up.svg" id="5_vsvcv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mmscw"]
+atlas = ExtResource("5_vsvcv")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r8n5f"]
+atlas = ExtResource("5_vsvcv")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0rar"]
+atlas = ExtResource("5_vsvcv")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqyb8"]
+atlas = ExtResource("5_vsvcv")
+region = Rect2(96, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_q502x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_ykjtr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_bdpyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1m2fn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mmscw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r8n5f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0rar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqyb8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://bgmxtbj2moym7"]
+
+[ext_resource type="Texture2D" uid="uid://cs412tp1k7w0q" path="res://Shooter/army_guy0.png" id="1_b86kw"]
+[ext_resource type="Script" path="res://player_controler.gd" id="2_2y7sp"]
+[ext_resource type="Texture2D" uid="uid://bj6ee2g6872mn" path="res://Shooter/army_guy1.png" id="3_v6kmx"]
+[ext_resource type="Texture2D" uid="uid://lsmauqf2yrf4" path="res://Shooter/army_guy2.png" id="4_6gluo"]
+[ext_resource type="Texture2D" uid="uid://m8riy4txmxu1" path="res://Shooter/army_guy3.png" id="5_qffrx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3wsdd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qa2sl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_b86kw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_v6kmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_6gluo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_qffrx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(-1.71474, -1.70754)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(-146.378, -94.2874)
+script = ExtResource("2_2y7sp")
+multiplier = 2.5
+deceleration = 20.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_3wsdd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_qa2sl")

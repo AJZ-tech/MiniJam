@@ -1,4 +1,11 @@
-[gd_scene format=3 uid="uid://bnagb0iplypge"]
+[gd_scene load_steps=5 format=3 uid="uid://cqqjglek6r68f"]
+
+[ext_resource type="Texture2D" uid="uid://uruhpmw433tb" path="res://icon.svg" id="1_vph6t"]
+[ext_resource type="Script" path="res://player_controler.gd" id="2_y5h0i"]
+[ext_resource type="Script" path="res://camera.gd" id="3_8jaab"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ctvl"]
+size = Vector2(128, 128)
 
 [node name="Node2D" type="Node2D"]
 
@@ -6,3 +13,20 @@
 offset_right = 139.0
 offset_bottom = 57.0
 placeholder_text = "type here..."
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+position = Vector2(389, 151)
+script = ExtResource("2_y5h0i")
+multiplier = 2.5
+
+[node name="Sprite2D" type="Sprite2D" parent="CharacterBody2D"]
+texture = ExtResource("1_vph6t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_8ctvl")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("3_8jaab")
+target = NodePath("../CharacterBody2D")
+follow_mode = 3
+bounded_border = Vector2(200, 200)

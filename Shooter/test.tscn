@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://bgmxtbj2moym7"]
 
 [ext_resource type="Texture2D" uid="uid://cs412tp1k7w0q" path="res://Shooter/army_guy0.png" id="1_b86kw"]
-[ext_resource type="Script" path="res://player_controler.gd" id="2_2y7sp"]
+[ext_resource type="Script" path="res://player_controller.gd" id="2_2y7sp"]
 [ext_resource type="Texture2D" uid="uid://bj6ee2g6872mn" path="res://Shooter/army_guy1.png" id="3_v6kmx"]
 [ext_resource type="Texture2D" uid="uid://lsmauqf2yrf4" path="res://Shooter/army_guy2.png" id="4_6gluo"]
 [ext_resource type="Texture2D" uid="uid://m8riy4txmxu1" path="res://Shooter/army_guy3.png" id="5_qffrx"]
@@ -32,7 +32,7 @@ animations = [{
 scale = Vector2(-1.71474, -1.70754)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="."]
-position = Vector2(-146.378, -94.2874)
+position = Vector2(-136.464, -74.3758)
 script = ExtResource("2_2y7sp")
 multiplier = 2.5
 deceleration = 20.0
